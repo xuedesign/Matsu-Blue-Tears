@@ -1,22 +1,27 @@
-/**********************************************************************************************
+/**
+*
+* @project    xuedesign studio
+* @Author     Elmo Wu <hello@xuedesign.tw>
+* @copyright  2016 xuedesign studio
+* @version    v1.0 - 201606
+*
+*=====================================
+*   1 通用
+*   2.網站架構 
+*   3.首頁
+*       3-1. 主要內容區塊
+*       3-2. 首頁選單
+*       3-3. 版權列	
+*=====================================
+**/
 
-	Title: CSS for Workforce Development Agency Site
-	Author: Elmo Wu (by xuedesign studio)
-	Author URL: http://www.xuedesign.tw/
-	Version: v1.0 (2016/02)
 
-***********************************************************************************************
-		1 通用
-		2.首頁
-		   2-1. 頂端列
-		   2-2. 主要內容區塊
-		   2-3. 首頁選單
-		   2-4. 版權列	
-***********************************************************************************************/
-
-/* 1. 通用 
-===============================================================================================*/
-html { font-size:62.5% }
+/*
+=====================================
+通用設定
+=====================================
+*/
+html { font-size:62.5%}
 body{
 	font-family:"微軟正黑體","Microsoft JhengHei","新細明體","PMingLiU", Arial, Helvetica, sans-serif;
 	font-size: 1rem;
@@ -24,106 +29,48 @@ body{
 	color:#513030;
 	background:url(../images/bg_site.jpg);
     background-size: cover}
-a:link {text-decoration:underline; color:#00adee}
+/*a:link {text-decoration:underline; color:#00adee}
 a:visited {text-decoration:underline; color:#8c8c8c}
-a:hover {text-decoration:none; color:#F50}
+a:hover {text-decoration:none; color:#F50}*/
 form{margin:0; padding:0}
 image{border:0}
 
 .clean{ clear:both}
 .hidden{ display:none}
 ::selection {
-   background:#4b4608;
+   background:#243975;
    color:#fffcdb}
 ::-moz-selection {
-   background:#4b4608;
+   background:#243975;
    color:#fffcdb}
 
-/* 2. 首頁  
-===============================================================================================*/
+/*
+=====================================
+網站架構
+=====================================
+*/
 #wrap{
 	display:block;
-	width:1238px;
+	width:1239px;
 	min-width:1280px;
 	margin:0 auto}
 #box_index{
 	display:block;
-	width:1238px;
+	width:1239px;
     min-height: 759px;
 	background:url(../images/bg_index.png) repeat;
-	margin: 60px auto 0 auto ;
+	margin: 55px auto 0 auto ;
 	-webkit-box-shadow: 0 0 35px #0c49f7;
     -moz-box-shadow: 0 0 35px #0c49f7;
     box-shadow: 0 0 35px #0c49f7;
 	-webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px}
-
-/* 2.1 頂端列 */	
-/*header{
-	display:block;
-	position:relative;
-	width:1238px;
-	height:89px}*/
-h1 a{
-	display:block;
-	position:absolute;
-	top:28px;
-	left:43px;
-	width:99px;
-	height:135px;
-	background:url(../images/pic_h1.png) no-repeat;
-	text-indent:-9999px}
-
-/* 2.2 主要內容區塊 */		
 #box_content{
 	display:block;
 	position:relative;
 	width:1239px;
 	min-height:713px}
-/*#box_content h2{
-	display:block;
-	position:absolute;
-	top:50px;
-	left:43px;
-    z-index:99;
-	width:572px;
-	height:139px;
-	background:url(../images/pic_slogan.png) no-repeat;
-	text-indent:-9999px}*/	
-
-	
-		
-
-/* 2.3 首頁選單 */		
-#box_menu{
-	display:block;
-	position:absolute;
-	top:39px;
-	right:24px;
-	width: 374px;
-	height:25px;
-	padding:10px 10px;
-    background: url(../images/bg_menu-03.png) no-repeat}
-#box_menu ul{ display:block; margin:0; padding:0}
-#box_menu li{ display: inline-block; list-style: none}
-#box_menu a{
-    display: block;
-	/*float:left;*/
-	height:24px;
-	text-indent:-9999px;
-	background:url(../images/btn_nav.png) no-repeat;
-	margin:0 10px;}
-#box_menu a.nav_01{ width:188px; background-position: 0 0}
-#box_menu a.nav_01:hover{ background-position: 0 -24px}
-#box_menu a.nav_02{ width:145px; background-position: 0 -48px}
-#box_menu a.nav_02:hover{ background-position: 0 -72px}
-#box_menu a.nav_03{ width:125px; background-position: 0 -96px}
-#box_menu a.nav_03:hover{ background-position: 0 -120px}
-#box_menu a.nav_04{ width:85px; background-position: 0 -144px}
-#box_menu a.nav_04:hover{ background-position: 0-168px}
-
-/* 2.4 版權列 */					
 footer{
 	clear:both;
 	display:block;
@@ -134,6 +81,114 @@ footer{
 	-webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px}
+
+/*
+=====================================
+首頁
+=====================================
+*/
+
+/*主要內容區塊 */
+h1 a,
+h2,
+.slogan,
+#btn_play a,
+#box_boy,
+#box_girl,
+#box_white{   
+    display:block;
+	position:absolute}
+h1 a,
+h2,
+.slogan,
+#btn_play a{
+    text-indent:100%;
+    white-space: normal;
+    overflow: hidden;
+font-size: 0}
+h1 a{
+	top: 46px;
+	right: 19px;
+	width: 211px;
+	height: 83px;
+	background: url(../images/pic_h1.png) no-repeat}
+h2{
+    top: 51px;
+	left: 220px;
+	width: 592px;
+	height: 162px;
+	background: url(../images/bg_title.png) no-repeat}
+.slogan{
+    top: 233px;
+	right: 352px;
+	width: 299px;
+	height: 58px;
+	background: url(../images/bg_slogan.png) no-repeat}
+#btn_play a{
+    top: 321px;
+	right: 352px;
+	width: 147px;
+	height: 36px;
+	background: url(../images/btn_play.png) no-repeat}
+#btn_play a:hover{
+    background: url(../images/btn_play.png) 0 -36px no-repeat}
+#box_boy{
+    top: 0;
+	left: 22px;
+	width: 144px;
+	height: 372px;
+	background: url(../images/pic_boy.jpg) no-repeat}
+#box_girl{
+    bottom: 0;
+	right: 36px;
+    z-index: 99;
+	width: 188px;
+	height: 373px;
+	background: url(../images/pic_girl.jpg) no-repeat}
+#box_white{
+    top: 0;
+	right: 130px;
+	width: 127px;
+	height: 481px;
+    background: rgba(256, 256, 256, .2)}
+
+
+/*首頁選單 */		
+#box_menu{
+	display:block;
+	position:absolute;
+	bottom:39px;
+	left:50%;
+	width: 510px;
+    margin-left: -250px}
+#box_menu ul{ 
+    display:block; 
+    margin:0; 
+    padding:0}
+#box_menu li{ 
+    display: inline-block; 
+    list-style: none;
+    background: url(../images/bg_line-white.png) right no-repeat}
+#box_menu li:nth-child(3){
+    background: none}
+#box_menu a{
+    display: block;
+	height:39px;
+	text-indent:-9999px;
+	background:url(../images/btn_nav.png) no-repeat;
+	margin:0 15px}
+#box_menu a:nth-child(1){
+    margin-right:20px}
+#box_menu a.nav_01{ width: 130px; background-position: 0 0}
+#box_menu a.nav_01:hover{ background-position: 0 -39px}
+#box_menu a.nav_02{ width: 115px; background-position: 0 -78px}
+#box_menu a.nav_02:hover{ background-position: 0 -117px}
+#box_menu a.nav_03{ width: 115px; background-position: 0 -156px}
+#box_menu a.nav_03:hover{ background-position: 0 -195px}
+#box_menu a.nav_04{ width: 115px; background-position: 0 -234px}
+#box_menu a.nav_04:hover{ background-position: 0 -273px}
+
+/* 版權列 */					
 footer p{
 	text-align:center;
 	font-size:1.3rem;
@@ -141,7 +196,7 @@ footer p{
 	margin:0;
 	padding:0;
 	line-height:46px}
-footer .txt_ad{
+footer .txt_mark{
 	display:block;
 	position:absolute;
 	top:14px;
@@ -149,7 +204,9 @@ footer .txt_ad{
 	width:52px;
 	height:24px;
 	background:url(../images/pic_ad.png) no-repeat;
-	text-indent:-9999px}
+	text-indent:100%;
+    white-space: normal;
+    overflow: hidden}
 
 /*動畫效果*/
 .animated {
