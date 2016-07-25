@@ -8,10 +8,14 @@
 *=====================================
 *   1 通用
 *   2.網站架構 
-*   3.內頁編排
+*   3.內頁架構
 *       3-1. 側邊攔
 *       3-2. 內容區塊
-*       3-3. 版權列	
+*       3-3. 版權列
+*   4.區域編排
+*       4-1. 藍眼淚介紹
+*       4-2. 劇照花絮
+*       4-3. 相關連結
 *=====================================
 **/
 
@@ -59,9 +63,9 @@ image{border:0}
 	width:1239px;
 	margin: 55px auto 0 auto;
     background:url(../images/bg_index.png) no-repeat #04040A;
-	-webkit-box-shadow: 0 0 35px #0c49f7;
+	/*-webkit-box-shadow: 0 0 35px #0c49f7;
     -moz-box-shadow: 0 0 35px #0c49f7;
-    box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;*/
 	-webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px}
@@ -104,7 +108,7 @@ footer{
 
 /*
 =====================================
-內頁編排
+內頁架構
 =====================================
 */
 h1 a,
@@ -204,7 +208,16 @@ h1 a{
     display: block;
     width: 845px;
     margin: 0 auto;
-    padding-top: 30px}
+    padding: 30px 0}
+#box_main h3{
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #0e206d}
+#box_main p{
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #2f2f2f}
+
 
 /* 版權列 */
 footer p{
@@ -226,7 +239,50 @@ footer .txt_mark{
     white-space: normal;
     overflow: hidden}
 
+/*
+=====================================
+區域編排
+=====================================
+*/
+/*藍眼淚介紹*/
+#myvideo{
+    display: block;
+    width: 700px;
+    margin: 0 auto}
 
+/*劇照花絮*/
+#photo_list{
+	display:block;
+	width:840px;
+	margin:0 auto}
+#photo_list li{
+	display:block;
+	float:left;
+	width:100px;
+	height:100px;
+	margin:0 30px 25px;
+	list-style:none}
+#photo_list img{
+    border: 2px solid #e1e1e1}
+
+/*相關連結*/
+#mylink a{
+    display: block;
+    width: 840px;
+    height: 148px;
+    margin: 0 auto;
+    background: url(../images/pic_link-matsu.png) no-repeat;
+    text-indent: 100%;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 0;
+    border: 2px solid #e1e1e1}
+#mylink p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    color: #4b4b4b}
 
 /*動畫效果*/	
 .animated {
@@ -275,4 +331,46 @@ footer .txt_mark{
 	animation-duration: 2s;    
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+@-webkit-keyframes breathe {
+ 0% {
+   -webkit-box-shadow: 0 0 35px #0c49f7;
+    -moz-box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;}
+
+  50% {
+    -webkit-box-shadow: 0 0 95px #0c49f7;
+    -moz-box-shadow: 0 0 95px #0c49f7;
+    box-shadow: 0 0 95px #0c49f7;}
+ 100% {
+   -webkit-box-shadow: 0 0 35px #0c49f7;
+    -moz-box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;}}
+
+@keyframes breathe {
+ 0% {
+   -webkit-box-shadow: 0 0 35px #0c49f7;
+    -moz-box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;}
+
+  50% {
+    -webkit-box-shadow: 0 0 95px #0c49f7;
+    -moz-box-shadow: 0 0 95px #0c49f7;
+    box-shadow: 0 0 95px #0c49f7;}
+ 100% {
+   -webkit-box-shadow: 0 0 35px #0c49f7;
+    -moz-box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;}}
+
+.mybreathe{
+   -webkit-animation-duration: 3500ms;
+    -moz-animation-duration: 3500ms;
+	animation-duration: 3500ms;	  
+   -webkit-animation-name: breathe;
+   animation-name: breathe;
+   -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite    
 }

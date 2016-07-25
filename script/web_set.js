@@ -14,5 +14,4 @@ window.onload = externalLinks;
 //圖片延遲載入
 $(function() {
   $("#wrap img").lazyload({placeholder : "../images/grey.gif",effect: "fadeIn"});
-      });
-	  
+      });	  
