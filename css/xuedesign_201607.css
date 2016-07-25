@@ -3,7 +3,7 @@
 * @project    xuedesign studio
 * @Author     Elmo Wu <hello@xuedesign.tw>
 * @copyright  2016 xuedesign studio
-* @version    v1.0 - 201606
+* @version    v1.0 - 201607
 *
 *=====================================
 *   1 通用
@@ -58,7 +58,7 @@ image{border:0}
 	display:block;
 	width:1239px;
     min-height: 759px;
-	background:url(../images/bg_index.png) repeat;
+	background:url(../images/bg_index.png) no-repeat;
 	margin: 55px auto 0 auto ;
 	-webkit-box-shadow: 0 0 35px #0c49f7;
     -moz-box-shadow: 0 0 35px #0c49f7;
@@ -174,7 +174,10 @@ h2{
 #box_menu a{
     display: block;
 	height:39px;
-	text-indent:-9999px;
+	text-indent:100%;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 0;
 	background:url(../images/btn_nav.png) no-repeat;
 	margin:0 15px}
 #box_menu a:nth-child(1){

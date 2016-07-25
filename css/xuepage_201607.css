@@ -1,109 +1,220 @@
-/**********************************************************************************************
+/**
+*
+* @project    xuedesign studio
+* @Author     Elmo Wu <hello@xuedesign.tw>
+* @copyright  2016 xuedesign studio
+* @version    v1.0 - 201607
+*
+*=====================================
+*   1 通用
+*   2.網站架構 
+*   3.內頁編排
+*       3-1. 側邊攔
+*       3-2. 內容區塊
+*       3-3. 版權列	
+*=====================================
+**/
 
-	Title: CSS for Workforce Development Agency Site
-	Author: Elmo Wu (by xuedesign studio)
-	Author URL: http://www.xuedesign.tw/
-	Version: v1.0 (2016/02)
 
-***********************************************************************************************
-		1 通用
-		2.內容頁
-		   2-1. 基本架構
-		   2-2. 初聘外勞懶人包
-		   2-3. 線上課程
-		   2-4. 相關連結
-***********************************************************************************************/
-
-/* 1. 通用 
-===============================================================================================*/
+/*
+=====================================
+通用設定
+=====================================
+*/
+html { font-size:62.5%}
 body{
 	font-family:"微軟正黑體","Microsoft JhengHei","新細明體","PMingLiU", Arial, Helvetica, sans-serif;
-	font-size:100%;
+	font-size: 1rem;
 	line-height:22px;
 	color:#513030;
-	background:url(../images/bg_site.png) no-repeat fixed}
-a:link {text-decoration:none; color:#00adee}
-a:visited {text-decoration:none; color:#8c8c8c}
-a:hover {text-decoration:none; color:#F50}
+	background:url(../images/bg_site.jpg);
+    background-size: cover}
+/*a:link {text-decoration:underline; color:#00adee}
+a:visited {text-decoration:underline; color:#8c8c8c}
+a:hover {text-decoration:none; color:#F50}*/
 form{margin:0; padding:0}
 image{border:0}
 
 .clean{ clear:both}
 .hidden{ display:none}
 ::selection {
-   background:#4b4608;
+   background:#243975;
    color:#fffcdb}
 ::-moz-selection {
-   background:#4b4608;
+   background:#243975;
    color:#fffcdb}
 
-/* 2. 內容頁  
-===============================================================================================*/
+/*
+=====================================
+網站架構
+=====================================
+*/
 #wrap{
 	display:block;
-	width:1238px;
+	width:1239px;
 	min-width:1280px;
 	margin:0 auto}
-
-/* 2.1 基本架構*/	
-h1 a{
+#box_container{
 	display:block;
-	position:absolute;
-	top:28px;
-	left:45px;
-	width:373px;
-	height:80px;
-	background:url(../images/pic_subh1.png) no-repeat;
-	text-indent:-9999px}
-#box_menu{
+	width:1239px;
+	margin: 55px auto 0 auto;
+    background:url(../images/bg_index.png) no-repeat #04040A;
+	-webkit-box-shadow: 0 0 35px #0c49f7;
+    -moz-box-shadow: 0 0 35px #0c49f7;
+    box-shadow: 0 0 35px #0c49f7;
+	-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px}
+#box_subcontent{
 	display:block;
-	position:absolute;
-	top:50px;
-	right:24px;
-	/*border:2px solid #00a1f1;
-	-webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;*/
-	width:485px/*650px*/;
-	height:25px;
-	padding:10px 10px;
-    background: url(../images/bg_menu-04.png) no-repeat}
-#box_menu ul{ display:block; margin:0; padding:0}
-#box_menu li{ display: inline-block; list-style: none}
-#box_menu a{
+	position:relative;
+	width:1239px}
+#box_aside{
 	display:block;
+	position:relative;
 	float:left;
-	height:24px;
-	text-indent:-9999px;
-	background:url(../images/btn_nav.png) no-repeat;
-	margin:0 10px;}
-#box_menu a.nav_01{ width:188px; background-position: 0 0}
-#box_menu a.nav_01:hover{ background-position: 0 -24px}
-#box_menu a.nav_02{ width:145px; background-position: 0 -48px}
-#box_menu a.nav_02:hover{ background-position: 0 -72px}
-#box_menu a.nav_03{ width:125px; background-position: 0 -96px}
-#box_menu a.nav_03:hover{ background-position: 0 -120px}
-#box_menu a.nav_04{ width:85px; background-position: 0 -144px}
-#box_menu a.nav_04:hover{ background-position: 0-168px}
-
+	z-index:99;
+	width:295px}
+#box_pagemain{
+	display:block;
+	position:relative;
+	float:right;
+	width:944px;
+    min-height: 714px}
+#box_pageinfo{
+	display: block;
+	width: 913px;
+    min-height: 611px;
+	margin:103px auto 0 auto;
+	background: rgba(256, 256, 256, .6);
+	-webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0}
 footer{
 	clear:both;
 	display:block;
 	position:relative;
 	width:1238px;
 	height:46px;
-	background:url(../images/bg_footer.png) repeat-x;
+	background: url(../images/bg_footer.png) repeat-x;
 	-webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px}
+
+
+/*
+=====================================
+內頁編排
+=====================================
+*/
+h1 a,
+h2,
+.slogan,
+#btn_play a{
+    display:block;
+	position:absolute;
+    text-indent: 100%;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 0}
+
+/* 側邊欄 */
+h2{
+    top: 19px;
+	left: 26px;
+	width: 266px;
+	height: 73px;
+	background:url(../images/bg_sub-title.png) no-repeat}
+.slogan {
+    top: 119px;
+	left:26px;
+	width: 248px;
+	height: 48px;
+	background:url(../images/bg_sub-slogan.png) no-repeat}
+#btn_play a{
+    top: 187px;
+	left: 57px;
+	width: 147px;
+	height: 36px;
+	background: url(../images/btn_play.png) no-repeat}
+#btn_play a:hover{
+    background: url(../images/btn_play.png) 0 -36px no-repeat}
+
+#box_menu{
+	display:block;
+	position:absolute;
+	top:276px;
+	left:57px}
+#box_menu ul{ 
+    display:block; 
+    margin:0; 
+    padding:0}
+#box_menu li{ 
+    display: block; 
+    list-style: none}
+#box_menu a{
+    display: block;
+	height:39px;
+	text-indent: 100%;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 0;
+	background:url(../images/btn_nav.png) no-repeat;
+	margin:0 0 15px}
+#box_menu a.nav_01{ width: 130px; background-position: 0 0}
+#box_menu a.nav_01:hover{ background-position: 0 -39px}
+#box_menu a.nav_02{ width: 115px; background-position: 0 -78px}
+#box_menu a.nav_02:hover{ background-position: 0 -117px}
+#box_menu a.nav_03{ width: 115px; background-position: 0 -156px}
+#box_menu a.nav_03:hover{ background-position: 0 -195px}
+#box_menu a.nav_04{ width: 115px; background-position: 0 -234px}
+#box_menu a.nav_04:hover{ background-position: 0 -273px}
+
+/*主要內容區*/
+h1 a{
+	top:21px;
+	right:26px;
+	width:187px;
+	height:74px;
+	background:url(../images/pic_subh1.png) no-repeat}
+#bar_title{
+	display:block;
+    position: relative;
+	width:100%;
+	height:51px;
+	padding: 12px 0 0 68px;
+    background: url(../images/bg_title-bar.png) no-repeat;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0}	
+#bar_title h3{
+	display:block;
+	background: url(../images/bg_pagetitle.png) no-repeat;
+	width:164px;
+	height:23px;
+	margin:0;
+    text-indent: 100%;
+    white-space: normal;
+    overflow: hidden;
+    font-size: 0}
+#bar_title .ptitle_01{ background-position:0 0}
+#bar_title .ptitle_02{ background-position:0 -23px}
+#bar_title .ptitle_03{ background-position:0 -46px}
+#box_main{
+    display: block;
+    width: 845px;
+    margin: 0 auto;
+    padding-top: 30px}
+
+/* 版權列 */
 footer p{
 	text-align:center;
-	font-size:0.813em;
-	color:#fffcdb;
+	font-size:1.3rem;
+	color:#98b4f9;
 	margin:0;
 	padding:0;
 	line-height:46px}
-footer .txt_ad{
+footer .txt_mark{
 	display:block;
 	position:absolute;
 	top:14px;
@@ -111,199 +222,11 @@ footer .txt_ad{
 	width:52px;
 	height:24px;
 	background:url(../images/pic_ad.png) no-repeat;
-	text-indent:-9999px}			
-	
-#box_container{
-	display:block;
-	width:1238px;
-	margin: 15px auto 30px auto;
-	-webkit-box-shadow: 0 0 20px #4E4E4E;
-    -moz-box-shadow: 0 0 20px #4E4E4E;
-    box-shadow: 0 0 20px #4E4E4E;
-	-webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-	background:url(../images/bg_content.png) no-repeat #F2F3F3}
-#box_subcontent{
-	display:block;
-	position:relative;
-	width:1238px}
-#bg_city{
-	display:block;
-	position:absolute;
-	bottom:0;
-	left:0;
-	background:url(../images/bg_city.png) no-repeat;
-	width:1238px;
-	height:160px}		
+	text-indent:100%;
+    white-space: normal;
+    overflow: hidden}
 
-#box_aside{
-	display:block;
-	position:relative;
-	float:left;
-	z-index:99;
-	width:236px;
-    margin-top:160px }
-#subvision{
-	display:block;
-	position:absolute;
-	top:0;
-	left:0;
-	background: url(../images/pic_subvision.png) no-repeat;
-	width:248px;
-	height:382px}		
 
-#box_pagemain{
-	display:block;
-	position:relative;
-	float:right;
-	width:1028px;
-	padding-top:6px}
-#box_pageinfo{
-	display: block;
-	width:913px;
-	margin:0 auto;
-	background: url(../images/bg_pageinfo.png) repeat-y;
-	-webkit-border-radius: 15px 15px 0 0;
-    -moz-border-radius: 15px 15px 0 0;
-    border-radius: 15px 15px 0 0}	
-#bar_title{
-	display:block;
-    position: relative;
-	width:845px;
-	height:41px;
-	padding:10px 0 0 35px}	
-#bar_title h3{
-	display:block;
-	background: url(../images/bg_pagetitle.png) no-repeat;
-	width:222px;
-	height:29px;
-	margin:0;
-    text-indent:-9999px}
-#bar_title .ptitle_01{ background-position:0 0}
-#bar_title .ptitle_02{ background-position:0 -29px}
-#bar_title .ptitle_03{ background-position:0 -58px}
-
-/* 2.2 初聘外勞懶人包*/	
-#box_main{
-	display:block;
-    position: relative;
-	width:870px;
-	min-height:435px;
-	margin:10px 30px 30px;
-	padding-bottom:30px;
-    /*border: 1px solid #f22626*/}	
-a.btn_viewbigshot{
-    display: block;
-    position: absolute;
-    top: -50px;
-    right: 0;
-    background: url(../images/btn_viewbigshot.png) no-repeat;
-    width: 100px;
-    height: 30px;
-    text-indent: -9999px}
-a.btn_viewbigshot:hover{
-    background-position: 0 -30px}
-		
-
-/* 2.3 線上課程*/	
-#mySWF{
-    display: block;
-    width: 880px;
-    height: 495px/*660px*/;
-    margin-bottom: 10px;
-    border: 5px solid #d1b741}
-#btn_lang{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0}
-#btn_lang li{
-    display: inline-block;
-    padding: 5px 15px;
-    margin: 0 5px;
-    background: #007BC7;
-    color: #fff;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px}
-#btn_lang li:hover,
-#btn_lang li.inlang{ background: #073190}
-#btn_lang li a,
-#btn_lang li a:visited,
-#btn_lang li a:hover{ color: #fff; text-decoration: none}
-
-/* 2.4 表單下載*/
-#link_item-01,
-#link_item-02{ 
-    display: block;
-    clear: both}
-#box_download{
-    display: block;
-    float: left;
-    width: 150px;
-    padding-top: 120px;
-    background:url(../images/icon-Link-doc.png) 9px 0 no-repeat;
-    text-align:center}
-#box_download a{
-    font-size:1em;
-	line-height:22px;
-    color: #513030;
-    text-decoration: none;
-	text-shadow:1px 1px 0 #FFFCFE}   
-#box_download a:hover{
-    color: #f50;
-    text-decoration: none}
-#box_download-note{
-    display: block;
-    float: right;
-    width: 610px;
-    min-height: 128px;
-    margin:0 0 30px 40px;
-    padding: 0 30px;
-    border: 2px solid rgb(209,183,65);
-    background: rgba(209,183,65,.5);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px}
-#box_download-note ol{
-    display: block;
-    margin: 0;
-    padding-bottom: 40px}
-#box_download-note li{
-    font-size: .938em;
-    line-height: 1.5em;
-    text-shadow:1px 1px 0 rgb(246,234,178);
-    padding: 8px 0;
-    border-bottom: 1px dashed #CEBC6D}
-/*.box_link ul{
-	display:block;
-	width:845px;
-	margin:0 auto;
-	padding:30px 0 0 0}
-.box_link li{
-	list-style:none;
-	display:block;
-	float:left;
-	width:150px;
-	height:220px;
-	margin:0 10px 0 9px}
-.box_link li h4{
-	font-size:1em;
-	text-align:center;
-	line-height:22px;
-	padding-top:0;
-	text-shadow:1px 1px 0 #FFFCFE}		
-.box_link li a{
-	display:block;
-	width:132px;
-	height:132px;
-    overflow: hidden;
-	background:url(../images/icon-Link.png) no-repeat;
-	text-indent:-9999px;
-	margin:0 auto}
-.box_link li a.logo-01{ background-position:0 0}
-.box_link li a.logo-02{ background-position:0 -132px}*/
 
 /*動畫效果*/	
 .animated {
