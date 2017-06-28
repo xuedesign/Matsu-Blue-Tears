@@ -16,6 +16,7 @@
 *       4-1. 藍眼淚介紹
 *       4-2. 劇照花絮
 *       4-3. 相關連結
+*   5.測試站標籤
 *=====================================
 **/
 
@@ -373,4 +374,38 @@ footer .txt_mark{
     animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite    
+}
+
+/*
+=====================================
+測試站標籤
+=====================================
+*/
+#myTag{
+    position: fixed;
+    top: -80px;
+    right: 0;
+    z-index: 990;
+    border-color: transparent;
+    border-left-color: RGBA(10,92,124,.8);
+    border-style: solid solid solid solid;
+    border-width: 50px;
+    height: 300px;
+    width: 50px;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg)
+    /*-webkit-box-shadow: 5px 5px 20px #8e8e8e;
+    -moz-box-shadow: 5px 5px 20px #8e8e8e;
+    box-shadow: 5px 5px 20px #8e8e8e;*/
+}
+#myTag p{
+    position: absolute;
+    top: 65px;
+    right: -10px;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+    transform: rotate(91deg);
+    -ms-transform: rotate(45deg)
 }
